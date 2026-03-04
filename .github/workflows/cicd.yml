@@ -23,7 +23,7 @@ jobs:
        runs-on: ubuntu-latest
        steps:
           - name: Test the container
-            run: ehco "Testing the container"
+            run: echo "Testing the container"
 
    deploy:
       runs-on: ubuntu-latest
