@@ -4,6 +4,16 @@ name: CICD
 # Manual click (deliver) workflow wheneven user need
 on :
    workflow_dispatch: 
+      inputs:
+         enviroment:
+            description: This is the enviroment value where this workflow runs
+            default: 'dev' 
+            required: true
+            type: choice
+            options:
+               - dev
+               - prod
+               - staging
 
 jobs:
 
@@ -28,6 +38,7 @@ jobs:
          run: echo "Testing the container"
 
    deploy:
+      
       needs: [build, test]
       runs-on: ubuntu-latest
       steps:
