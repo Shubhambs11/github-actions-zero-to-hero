@@ -13,7 +13,7 @@ jobs:
               uses: action/checkout@v4
 
             - name: setup python 3.13
-              uses: action/setup-pyhton@v5
+              uses: action/setup-python@v5
               with:
                 python-version: "3.13"
 
