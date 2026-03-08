@@ -2,87 +2,226 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>Shubham | DevOps Engineer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DevOps Zero To Hero</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
         body {
-            min-height: 100vh;
+            background: #0f172a;
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            padding: 20px 10%;
             display: flex;
+            justify-content: space-between;
             align-items: center;
-            justify-content: center;
-            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            color: #e0e0e0;
+            background: #0f172a;
+            position: sticky;
+            top: 0;
         }
-        .container {
-            text-align: center;
-            padding: 2rem;
-            max-width: 640px;
+
+        header h1 {
+            color: #38bdf8;
         }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
-            background: linear-gradient(90deg, #00d2ff, #7b2ff7);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-weight: 500;
         }
-        .badge {
-            display: inline-block;
-            margin: 1rem 0 2rem;
-            padding: 0.4rem 1.2rem;
-            border: 1px solid #7b2ff7;
-            border-radius: 999px;
-            font-size: 0.9rem;
-            color: #c4b5fd;
-            letter-spacing: 0.05em;
+
+        nav a:hover {
+            color: #38bdf8;
         }
-        .cards {
+
+        section {
+            padding: 80px 10%;
+        }
+
+        .hero {
             display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 90vh;
         }
+
+        .hero-text h2 {
+            font-size: 48px;
+        }
+
+        .hero-text span {
+            color: #38bdf8;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+            color: #cbd5e1;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background: #38bdf8;
+            color: #0f172a;
+            font-weight: 600;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #0ea5e9;
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
         .card {
-            background: rgba(255, 255, 255, 0.06);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 12px;
-            padding: 1.5rem 1.8rem;
-            min-width: 150px;
-            flex: 1;
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 15px;
+            transition: 0.3s;
         }
-        .card span {
-            display: block;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #9ca3af;
-            margin-bottom: 0.4rem;
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: #334155;
         }
-        .card strong {
-            font-size: 1.25rem;
-            color: #f9fafb;
+
+        .card h3 {
+            margin-bottom: 10px;
+            color: #38bdf8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #1e293b;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                flex-direction: column;
+                text-align: center;
+            }
         }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>DevOps Zero To Hero</h1>
-        <div class="badge">Josh Batch 10</div>
-        <div class="cards">
-            <div class="card">
-                <span>Framework</span>
-                <strong>Flask 3.1</strong>
-            </div>
-            <div class="card">
-                <span>Runtime</span>
-                <strong>Python 3.14</strong>
-            </div>
-            <div class="card">
-                <span>Deploy</span>
-                <strong>AWS ECS</strong>
-            </div>
+
+<header>
+    <h1>DevOps Engineer</h1>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
+
+<section class="hero">
+    <div class="hero-text">
+        <h2>Hello, I'm <span>Shubham</span></h2>
+        <p>DevOps Engineer | Cloud Enthusiast | Automation Specialist  
+           I build scalable infrastructure, automate deployments, and ensure reliable CI/CD pipelines.</p>
+        <a href="#contact" class="btn">Hire Me</a>
+    </div>
+</section>
+
+<section id="about">
+    <h2>About Me</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Who I Am</h3>
+            <p>Passionate DevOps Engineer focused on automation, cloud computing, and infrastructure as code.</p>
+        </div>
+        <div class="card">
+            <h3>My Mission</h3>
+            <p>To bridge the gap between development and operations with scalable, secure, and efficient systems.</p>
         </div>
     </div>
+</section>
+
+<section id="skills">
+    <h2>Technical Skills</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Cloud</h3>
+            <p>AWS</p>
+        </div>
+        <div class="card">
+            <h3>CI/CD</h3>
+            <p>Jenkins, GitHub Actions, GitLab CI</p>
+        </div>
+        <div class="card">
+            <h3>Containers</h3>
+            <p>Docker, Kubernetes</p>
+        </div>
+        <div class="card">
+            <h3>Infrastructure</h3>
+            <p>Terraform, Ansible</p>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <h2>Projects</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>CI/CD Pipeline</h3>
+            <p>Automated deployment pipeline using Jenkins, Docker, and Kubernetes.</p>
+        </div>
+        <div class="card">
+            <h3>AWS Infrastructure Setup</h3>
+            <p>Provisioned scalable infrastructure using Terraform on AWS.</p>
+        </div>
+        <div class="card">
+            <h3>Monitoring System</h3>
+            <p>Implemented monitoring using Prometheus and Grafana.</p>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Me</h2>
+    <div class="card-container">
+        <div class="card">
+            <h3>Email</h3>
+            <p>shubhambs1106@gmail.com</p>
+        </div>
+        <div class="card">
+            <h3>LinkedIn</h3>
+            <p>linkedin.com/in/shubhambs11</p>
+        </div>
+        <div class="card">
+            <h3>GitHub</h3>
+            <p>github.com/Shubhambs11</p>
+        </div>
+    </div>
+</section>
+
+<footer>
+    © 2026 Shubham | DevOps Engineer Portfolio
+</footer>
+
 </body>
 </html>
