@@ -26,10 +26,11 @@ jobs:
                  context: .
                  push: true
                  tags: |
-                  ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{github.ref_name}} # Use branch name as a tag.
+                  # use branch_name as a tag
+                  ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{github.ref_name}} 
                   ${{ vars.DOCKERHUB_USER }}/github-actions-app:latest
-                  ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{github.sha}} # Use commit it as a tag.
-                   
+                  # use commit_id it as a tag
+                  ${{ vars.DOCKERHUB_USER }}/github-actions-app:${{github.sha}} 
 
                 
                    
