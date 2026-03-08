@@ -3,7 +3,7 @@ name: deploy Flask app
 on: 
     workflow_dispatch:
 
-job:
+jobs:
     deploy:
         env:
             DOCKERHUB_USER: ${{ vars.DOCKERHUB_USER }}
