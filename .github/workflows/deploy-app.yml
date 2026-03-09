@@ -20,5 +20,5 @@ jobs:
                 version: 'latest'
 
           - name: deploy with docker compose     
-            run: docker-compose up -d --build
+            run: docker-compose up -d --build --force-recreate
 
