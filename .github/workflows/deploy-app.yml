@@ -20,6 +20,7 @@ jobs:
                 version: 'latest'
 
           - name: deploy with docker compose     
-            run: docker-compose up -d --build --no-cache
+            run: docker-compose up -d --build
+
 
 
