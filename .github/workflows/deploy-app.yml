@@ -20,5 +20,9 @@ jobs:
                 version: 'latest'
 
           - name: deploy with docker compose     
+<<<<<<< HEAD
             run: docker compose down && docker-compose up -d --build
+=======
+            run: docker-compose up -d --build --force-recreate --no-cache
+>>>>>>> acd4627 (added --force-recreate --no-cache in docker-compose build)
 
