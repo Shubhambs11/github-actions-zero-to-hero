@@ -14,6 +14,8 @@ jobs:
                 host: ${{ secrets.EC2_SSH_HOST }}
                 username: ${{ secrets.EC2_SSH_USERNAME }}
                 key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
-                script:
-                    echo "Starting Deployment"
-                    mkdir -p devops
+                script: |
+                   echo "Installing required packages and folders"
+                   sudo apt-get update && sudo apt-get install docker.io docker-compose-v2 -y
+                   sudo usermod -aG docker $USER
+                   mkdir -p DevOps
