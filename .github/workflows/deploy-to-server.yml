@@ -18,5 +18,3 @@ jobs:
                     echo "Starting Deployment"
                     mkdir devops
                     touch file.txt
-                    ls -la devops
-                    ls -la
