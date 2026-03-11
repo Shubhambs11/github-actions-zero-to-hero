@@ -8,7 +8,7 @@ jobs:
     deploy:
         runs-on: ubuntu-latest
         steps:
-            - name: SSH to Prod server
+            - name: SSH to Prod serverc
               uses: appleboy/ssh-action@v1.0.3
               with:
                 host: ${{ secrets.EC2_SSH_HOST }}
@@ -18,3 +18,5 @@ jobs:
                     echo "Starting Deployment"
                     mkdir devops
                     touch file.txt
+                    ls -la devops
+                    ls -la
