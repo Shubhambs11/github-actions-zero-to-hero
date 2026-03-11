@@ -19,3 +19,4 @@ jobs:
                    sudo apt-get update && sudo apt-get install docker.io docker-compose-v2 -y
                    sudo usermod -aG docker $USER
                    mkdir -p DevOps
+                   touch file.txt
