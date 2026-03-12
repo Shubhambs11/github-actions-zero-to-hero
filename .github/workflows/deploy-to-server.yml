@@ -38,10 +38,10 @@ jobs:
               uses: appleboy/ssh-action@v1.0.3
               with:
                 host: ${{ secrets.EC2_SSH_HOST }}
-                username: ${{ secrets.EC2_SSH_USERNAME }}
+                username: ${{ secrets.EC2_SSH_USERNAME }} 
                 key: ${{ secrets.EC2_SSH_PRIVATE_KEY }}
                 script: |
                    echo "Running App"
                    export DOCKERHUB_USER=${{ vars.DOCKERHUB_USER }}
-                   echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ vars.DOCKERHUB_USER }} --password-stdin
+                   echo ${{ secrets.DOCKERHUB_TOKEN }} | docker login -u ${{ secrets.DOCKERHUB_USER }} --password-stdin
                    cd ~/devops && docker compose down && docker compose up -d --build --force-recreate --pull always                 
