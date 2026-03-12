@@ -12,6 +12,5 @@ def health():
     return 'Server is up and running'
 
 
-app.run(port=80)
 # Use Gunicorn as the production WSGI server, listening on port 80
 CMD ["gunicorn", "--bind", "0.0.0.0:80", "app:app"]
